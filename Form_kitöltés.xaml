@@ -1,62 +1,268 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Form_kitöltés" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Form_kitöltés_1"
- xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" 
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
- xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" 
- xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" 
- xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" 
- xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" 
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <TextExpression.NamespacesForImplementation>
-        <sco:Collection x:TypeArguments="x:String">
-            <x:String>System.Activities</x:String>
-            <x:String>System.Activities.Statements</x:String>
-            <x:String>System.Activities.Expressions</x:String>
-            <x:String>System.Activities.Validation</x:String>
-            <x:String>System.Activities.XamlIntegration</x:String>
-            <x:String>Microsoft.VisualBasic</x:String>
-            <x:String>Microsoft.VisualBasic.Activities</x:String>
-            <x:String>System</x:String>
-            <x:String>System.Collections</x:String>
-            <x:String>System.Collections.Generic</x:String>
-            <x:String>System.Data</x:String>
-            <x:String>System.Diagnostics</x:String>
-            <x:String>System.Drawing</x:String>
-            <x:String>System.IO</x:String>
-            <x:String>System.Linq</x:String>
-            <x:String>System.Net.Mail</x:String>
-            <x:String>System.Xml</x:String>
-            <x:String>System.Xml.Linq</x:String>
-            <x:String>UiPath.Core</x:String>
-            <x:String>UiPath.Core.Activities</x:String>
-            <x:String>System.Windows.Markup</x:String>
-        </sco:Collection>
-    </TextExpression.NamespacesForImplementation>
-    <TextExpression.ReferencesForImplementation>
-        <sco:Collection x:TypeArguments="AssemblyReference">
-            <AssemblyReference>System.Activities</AssemblyReference>
-            <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-            <AssemblyReference>mscorlib</AssemblyReference>
-            <AssemblyReference>System.Data</AssemblyReference>
-            <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-            <AssemblyReference>System</AssemblyReference>
-            <AssemblyReference>System.Drawing</AssemblyReference>
-            <AssemblyReference>System.Core</AssemblyReference>
-            <AssemblyReference>System.Xml</AssemblyReference>
-            <AssemblyReference>System.Xml.Linq</AssemblyReference>
-            <AssemblyReference>PresentationFramework</AssemblyReference>
-            <AssemblyReference>WindowsBase</AssemblyReference>
-            <AssemblyReference>PresentationCore</AssemblyReference>
-            <AssemblyReference>System.Xaml</AssemblyReference>
-            <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-            <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-        </sco:Collection>
-    </TextExpression.ReferencesForImplementation>
-    <Sequence DisplayName="Form_kitöltés" sap2010:WorkflowViewState.IdRef="Sequence_1">
-        <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+<Activity mc:Ignorable="sap sap2010" x:Class="Form_kitöltés" this:Form_kitöltés.Doctor_Address_elérési_útvonal="C:\Users\juhaszde\Desktop\Doctor_Address.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Doctor_Address_elérési_útvonal" Type="InArgument(x:String)" />
+    <x:Property Name="dtDoctoradatok" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <this:Form_kitöltés.dtDoctoradatok>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:Form_kitöltés.dtDoctoradatok>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1194.4,3268.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Form_kitöltés_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Form_kitöltés" sap:VirtualizedContainerService.HintSize="986.4,3204" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtDoctoradatok]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="944.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[Doctor_Address_elérési_útvonal]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Orvosok adatai" sap:VirtualizedContainerService.HintSize="944.8,2983.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="911.2,2766.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="Index" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[Index]" DataTable="[dtDoctoradatok]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="869.6,2673.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="836,2556" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="SikeresKitöltés" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Orvos neve'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="794.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Text="[CurrentRow(&quot;Név&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/pages/responsepage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="613, 485, 730, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' class='office-form-question-textbox office-form-textfield-input form-control office-form-theme-focus-border border-no-radius' aaname='' /&gt;" Guid="17df9239-a738-45e2-8631-94775ba22620" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAsCAYAAABSUb9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAN4SURBVHhe7dwxk1RFFAZQfy+GmGEGIWaYYY4Ba4IhhphhiglrhBlmkDHWN1V369L2PK3amd7BOcGpfa+7X/edF33b2ztfffq02wEAAKcleAMAwAI3wfvZsx8BAIAjmwbvugYAAG5P8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFBG8AAFhA8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFjh68nz79YW/WBwAAl+qowfvFi5/3Zn0AAHDJjhq83737c9oOAACX7mjB++3b693Dh49279//Ne1P+4MH3+5ev/5t2r8lzzx+/N3uw4eP0/67lqM1vb5zrxcAgPWWBe/bOOcgm9rG4zWnrDfvN+8573vWDwDAeRK8bym1zdoEbwAAupMF7+wCP3ny/T6A3r//ze7Nm9/31xVUE0pzf+/e13s5hnIotFeQffXq15vxY7DNs5mj+rf+yTN9NS5m4bnq6329bav+qrfqy31fr9eW95b3U30ZO46PzJd32Mf2NQAAOG8nDd4JibUzOwbZtL98+ctnfYfCcgXR/jWF/WsLK3TX3Lk/tCuctZ4/v7oJrFnzUIBNX18z89fYrfr7uNxfXf30WSivkF7P9bqvr//YX5fxs2x9NgAAztdJg3cPrWPIHI3juzHIRl9v1p/5KghvGeve6kt9h+bs9c/qKT041zvZqnNcsz/fxwEAcN7uNHinv45NjDva3SzIZp205WfW6vP8l/n6uK1jLpkj4/t6va/PU+uN9ebd9CMis78E9OfL+A4j6wveAABfnjsL3unrO7mzkFlmwbuvl/5Dz45mobjXPaq5xzW26u9rjPNvBec8X3McqmvreQAAztedBO8xhNd9H99lXHaEx/EVfLNmP+O9Zawr91s73mnPWrN6D9Wf9tynvV9XX+14Z+6c/057VG1bnyd9gjcAwJfnzna887Mfvcg3oGwF7zybMfXMODbrHzrO0VWorXGZc7az3GWtHp5jq/6qN+Prc9fYXFdwnvWlLfNUW+m/HOTd9vFVEwAA5+towfvf2KkFAOCSLQvefRd41g8AAP9nJw/edSTj0NEPAAC4BMt2vAEA4JIJ3gAAsIDgDQAACwjeAACwgOANAAALCN4AALCA4A0AAAsI3gAAsIDgDQAACwjeAACwwMHgDQAAHNc/gjcAAHA6gjcAAJzcbvc3INIVokCTZ1YAAAAASUVORK5CYII=" InformativeScreenshot="bb52b327220aff5d246e2a9347a8e28a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="613, 442, 88, 22" ElementType="Text" FriendlyName="'Orvos neve'" FullSelectorArgument="&lt;webctrl aaname='Orvos neve:' parentid='QuestionId_r83071242f1634040a1bd0742ca823b65' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Orvos neve:' parentid='QuestionId_r83071242f1634040a1bd0742ca823b65' tag='SPAN' type='' class='text-format-content' check:innerText='Orvos neve:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAaCAYAAAA67jspAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJgSURBVGhD7ZUxUiQxDEU5FhwDjsBwAYYcckjhEGzIFkRwBfYGDBkbsRmb4a03Vb9LrZE9nmJxpOBVT8vSt/Rtmr3Pz1KScaThg0nDB5OGDyYNH0waPpg0fDBp+GBCw+/ufpb9/YMZxKLcZDdmhr+//ymLxUk5P78oHx9/t8aT3ZkMx0gMvb6+2UjqWU/6mAx/fv5VDg+PysvLaiNJkMNN58bbd9XC/f1DqMP78fFiFufw7GcrOkyf0/q0qZ/V6nX9bOmSa3V5J966WMRsvKYBzIkPvt/JcBa2fTL0aZEwT0Sp0yEox29k9ZVjm49ivieGeHx8mtY9MgAd9aOYNQNdeylkjnJYtxqg/mxOS0Pv5EkDJsP96UX4TXn6YQAda5RujTaPBgKa1F+Br+kh6kc6mk0zeF3e1bM3D/itnns0bNzyZcPtKQsf57lcnq3rvQEWPwjP6EBrWFNs3F6AVs+qjXrkt/rq0bBxy5c/KdEGyrPGqXkNozVLtMZvTIeoxlLrxxsuPY+tZS+9AxdGBvdqRPyXf5rRBjTMkG9vv9c55BKPbo9Ah9zIWA0Z1YlaP97wWs8W9UK+ZqGetV6NiMnwlhEQmdHamIPje3x7+2Mjxw/ga2qHXqsTPYZrDnJtTgR1l5dX61o79y4anslwkJAfSnF/GC3DdYCnp8tZsxDpKaZc6jks9SG92oWAHsN5Zw//10yt75MYF0D/f+zaNg3irHvNmeGCBv23CTGfVxtQRE0JGVjbI1pvmQ21frzhQG9WO6rjnXht35bGToYn30caPpg0fDBp+GDS8MGk4UMp5R9CaDq/M1qEwAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Telefonszám'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="794.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Text="[CurrentRow(&quot;Telefonszám&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/pages/responsepage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="613, 595, 730, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='INPUT' class='office-form-question-textbox office-form-textfield-input form-control office-form-theme-focus-border border-no-radius' aaname='' /&gt;" Guid="86fbeff5-e7f9-40e7-be37-5feead7327fa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAsCAYAAABSUb9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAN4SURBVHhe7dwxk1RFFAZQfy+GmGEGIWaYYY4Ba4IhhphhiglrhBlmkDHWN1V369L2PK3amd7BOcGpfa+7X/edF33b2ztfffq02wEAAKcleAMAwAI3wfvZsx8BAIAjmwbvugYAAG5P8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFBG8AAFhA8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFjh68nz79YW/WBwAAl+qowfvFi5/3Zn0AAHDJjhq83737c9oOAACX7mjB++3b693Dh49279//Ne1P+4MH3+5ev/5t2r8lzzx+/N3uw4eP0/67lqM1vb5zrxcAgPWWBe/bOOcgm9rG4zWnrDfvN+8573vWDwDAeRK8bym1zdoEbwAAupMF7+wCP3ny/T6A3r//ze7Nm9/31xVUE0pzf+/e13s5hnIotFeQffXq15vxY7DNs5mj+rf+yTN9NS5m4bnq6329bav+qrfqy31fr9eW95b3U30ZO46PzJd32Mf2NQAAOG8nDd4JibUzOwbZtL98+ctnfYfCcgXR/jWF/WsLK3TX3Lk/tCuctZ4/v7oJrFnzUIBNX18z89fYrfr7uNxfXf30WSivkF7P9bqvr//YX5fxs2x9NgAAztdJg3cPrWPIHI3juzHIRl9v1p/5KghvGeve6kt9h+bs9c/qKT041zvZqnNcsz/fxwEAcN7uNHinv45NjDva3SzIZp205WfW6vP8l/n6uK1jLpkj4/t6va/PU+uN9ebd9CMis78E9OfL+A4j6wveAABfnjsL3unrO7mzkFlmwbuvl/5Dz45mobjXPaq5xzW26u9rjPNvBec8X3McqmvreQAAztedBO8xhNd9H99lXHaEx/EVfLNmP+O9Zawr91s73mnPWrN6D9Wf9tynvV9XX+14Z+6c/057VG1bnyd9gjcAwJfnzna887Mfvcg3oGwF7zybMfXMODbrHzrO0VWorXGZc7az3GWtHp5jq/6qN+Prc9fYXFdwnvWlLfNUW+m/HOTd9vFVEwAA5+towfvf2KkFAOCSLQvefRd41g8AAP9nJw/edSTj0NEPAAC4BMt2vAEA4JIJ3gAAsIDgDQAACwjeAACwgOANAAALCN4AALCA4A0AAAsI3gAAsIDgDQAACwjeAACwwMHgDQAAHNc/gjcAAHA6gjcAAJzcbvc3INIVokCTZ1YAAAAASUVORK5CYII=" InformativeScreenshot="837d90ba0bf7e01cea3ba5de003adcf6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="613, 552, 92, 22" ElementType="Text" FriendlyName="'Telefonszám'" FullSelectorArgument="&lt;webctrl aaname='Telefonszám' parentid='QuestionId_rd8df6bb9a6b54ac190ac88ec7d215c5f' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Telefonszám' parentid='QuestionId_rd8df6bb9a6b54ac190ac88ec7d215c5f' tag='SPAN' type='' class='text-format-content' check:innerText='Telefonszám' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAaCAYAAABIIVmfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJsSURBVGhD7ZbBURwxEEUdFg4Dh8A6DnzHV0gCbhADHHEGOAO4wQ1Rb6s+9f2rZ3aYXSwOOrzakdTd+uo/I/j2+traoB/DgM4MAzozDOjMMKAzw4DODAM6czADnp9f2unpr3Z9fVOuz3F//6cdHX3fwnMV8xU4P7/YnpGzVutr2Brw8PC3HR//eG9CwhoxmeysNeDx8altNj+/dOMBfehEb7W+lvILwGmo1qZYa8BnHeyQcLazs987X8I1DAMWwNk+S9+HDKBZfjX5tTFlwFwOe/iaX3W6mnzdc5UPc3sAmnxdZ8s84S9E5ubfgEqD8n1u6hpfbABCvAi/jHXYyoBdOcBzfgESnnE5h0bmXCvPXi/r83t5efUe76Q+YqmnhuuMuZ9rIIf9Tk4222tLuaynebDIABX15gJjFZU4xSzJYZwNUh3fX2QuMZ4L2cQ8yxRz+zqpt9KATn/xgGdM8TlYZACbZkHNa/M0YElONSbeG+hkzdQJ1KGe6+AN1XgK1rORvkYN4XGVhjwToHkvA1yAo40qA6p4cHEpdkpotVYdnjrU84a7lowH6mFsmqR5/+pSb6UhYyC1i8UGZMGkMmBXDmScDs18FfvRL8CpGirdPieq+ql3SQzsZYAOVTVFpAFLciDFZh2HOW9UdXjtW+VD7kecm+pU9Rl7fhVzcAOgEspGOmjVuF05GqdY5rgu+PW5rFXpTAP4j8drEy8TqUVN1+Mw79qkq4sBgCDdpSlk6s2dy4FKLKg5U3lQ6SSGWOlg3fdX86XX14SMzhieb2/v/tFSadjbgMH/YxjQmWFAZ4YBnRkGdGYY0JXW3gAtNWGcKR5odAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cím'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="794.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Text="[CurrentRow(&quot;Cím&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/pages/responsepage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="613, 748, 730, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='INPUT' class='office-form-question-textbox office-form-textfield-input form-control office-form-theme-focus-border border-no-radius' aaname='' /&gt;" Guid="9e317af1-456c-4fc9-9fa1-639b8aea0588" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAsCAYAAABSUb9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAN4SURBVHhe7dwxk1RFFAZQfy+GmGEGIWaYYY4Ba4IhhphhiglrhBlmkDHWN1V369L2PK3amd7BOcGpfa+7X/edF33b2ztfffq02wEAAKcleAMAwAI3wfvZsx8BAIAjmwbvugYAAG5P8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFBG8AAFhA8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFjh68nz79YW/WBwAAl+qowfvFi5/3Zn0AAHDJjhq83737c9oOAACX7mjB++3b693Dh49279//Ne1P+4MH3+5ev/5t2r8lzzx+/N3uw4eP0/67lqM1vb5zrxcAgPWWBe/bOOcgm9rG4zWnrDfvN+8573vWDwDAeRK8bym1zdoEbwAAupMF7+wCP3ny/T6A3r//ze7Nm9/31xVUE0pzf+/e13s5hnIotFeQffXq15vxY7DNs5mj+rf+yTN9NS5m4bnq6329bav+qrfqy31fr9eW95b3U30ZO46PzJd32Mf2NQAAOG8nDd4JibUzOwbZtL98+ctnfYfCcgXR/jWF/WsLK3TX3Lk/tCuctZ4/v7oJrFnzUIBNX18z89fYrfr7uNxfXf30WSivkF7P9bqvr//YX5fxs2x9NgAAztdJg3cPrWPIHI3juzHIRl9v1p/5KghvGeve6kt9h+bs9c/qKT041zvZqnNcsz/fxwEAcN7uNHinv45NjDva3SzIZp205WfW6vP8l/n6uK1jLpkj4/t6va/PU+uN9ebd9CMis78E9OfL+A4j6wveAABfnjsL3unrO7mzkFlmwbuvl/5Dz45mobjXPaq5xzW26u9rjPNvBec8X3McqmvreQAAztedBO8xhNd9H99lXHaEx/EVfLNmP+O9Zawr91s73mnPWrN6D9Wf9tynvV9XX+14Z+6c/057VG1bnyd9gjcAwJfnzna887Mfvcg3oGwF7zybMfXMODbrHzrO0VWorXGZc7az3GWtHp5jq/6qN+Prc9fYXFdwnvWlLfNUW+m/HOTd9vFVEwAA5+towfvf2KkFAOCSLQvefRd41g8AAP9nJw/edSTj0NEPAAC4BMt2vAEA4JIJ3gAAsIDgDQAACwjeAACwgOANAAALCN4AALCA4A0AAAsI3gAAsIDgDQAACwjeAACwwMHgDQAAHNc/gjcAAHA6gjcAAJzcbvc3INIVokCTZ1YAAAAASUVORK5CYII=" InformativeScreenshot="6f926dc910252d376191699981ba5646.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="613, 705, 29, 22" ElementType="Text" FriendlyName="'Cím'" FullSelectorArgument="&lt;webctrl aaname='Cím' parentid='QuestionId_rbd08fc43fb464d338ea95d10e81db553' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cím' parentid='QuestionId_rbd08fc43fb464d338ea95d10e81db553' tag='SPAN' type='' class='text-format-content' check:innerText='Cím' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAYAAAA5WTUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEHSURBVEhL7ZTBDYJAEEUtC8vAEsAGwDs2gWesAfvADsAK8IY3xnyTv1mWxWwE1MMeXgizw8ybneim70V+jZcgXoJ4CTJLIs9PkmVH6bqH9dwVq0RdNxKGOwmCrQLviDOnqq6LCICRBKYzG4KiOKtY294lTQ+jnE8ZSLheLySWuAGiJDBVFMVO00EW8B2rieO9NM3t9eQKEYewHivLy6AWUBI4dN2xTQIN0AxNmYO1JkmqBkOebdVKwiz8jikJPBlDIzTUJ8eAGNS8jcUk9FsAXIMu5iQxZx2LSCDZti8bq0kwQS8+xWoSgB+aBYH+Z7WqBEED/q4JPkYRnq8u8W28BPES5A8kRJ63a6lgE/VhzgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Város'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="794.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Text="[CurrentRow(&quot;Város&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/Pages/ResponsePage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="613, 415, 730, 40" ElementType="InputBox" FriendlyName="'MN'" FullSelectorArgument="&lt;webctrl idx='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='INPUT' class='office-form-question-textbox office-form-textfield-input form-control office-form-theme-focus-border border-no-radius' aaname='' /&gt;" Guid="1e631553-c57f-4ea1-bbb4-4a3b27ed05dd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAsCAYAAABSUb9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIaSURBVHhe7dw9ThtBGIBhjgXHgCNgLoDpSU9aqKGElrSkhJLcgJRQQQcdg76VJhpsA5GY/SSvnuKR52enfzVa78braykAAMC4hDcAACT4F97n5xcAAEBnK8O7jgEAgO8T3gAAkEB4AwBAAuENAAAJhDcAACQQ3gAAkEB4AwBAAuENAAAJhDcAACQQ3gAAkEB4AwBAAuENAAAJhDcAACQQ3gAAkEB4AwBAgm7hfXf3t2xv75TLy18r95+fX8rh4Y9BjGPt+PhkOBNn22cfH5/KfH6wtA4AAOuqa3jv78+HYI5wXty/vf1TNje3lsI7zsRv+6zwBgBgarqG9+7ubBCR3e7V2+4I7MXwPj09K7PZ3rszwhsAgKnpGt4Ry1dXv9/Fdd07OvpZrq9vlsI7Xk2J6I74rjflwhsAgKnpHt739w9DXLc32G1grwrvOg4xFt4AAExN9/COaI6YrhHdrn8W3m1sC28AAKZmlPBuw7mN8M/CO8Q49uPWXHgDADAlo4R3zCOi44+TbUB/Fd6xHvuL5wAAYN2NFt4xj29019vu8FV4h3pu1fe9AQBgXY0W3iHCOmK7zv8nvEOsCW8AAKakW3gDAAAfE94AAJBAeAMAQALhDQAACYQ3AAAkEN4AAJBAeAMAQALhDQAACYQ3AAAkEN4AAJBAeAMAQALhDQAACYQ3AAAk+DC8AQCAvpbCGwAAGI/wBgCA0ZXyBi0kKd5YJH2AAAAAAElFTkSuQmCC" InformativeScreenshot="c1fb9e5419447e5022f67e5cf393d261.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="613, 372, 41, 22" ElementType="Text" FriendlyName="'Város'" FullSelectorArgument="&lt;webctrl aaname='Város' parentid='QuestionId_r1d5c318077a54795a8c6cd00f43d6657' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Város' parentid='QuestionId_r1d5c318077a54795a8c6cd00f43d6657' tag='SPAN' type='' class='text-format-content' check:innerText='Város' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAaCAYAAAAjZdWPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGUSURBVFhH7ZNNTgJBEIU9Fh4Dj8B4ATwAXgLXuMUlbvEKeAPc4Q53uKPM6+RNXtfUDBhDR5JevMBM18/Xr2pujkeza1OFLqUKXUoVupT+BL3ZvNt4fGfb7Ud4fiklaDRFc0D4AGo+f7LZ7NEOh+/0vN9/WdPcD+ZcSgkaIABSKFV0qdXqNUnjSqldj6FRAw6uwl2+2+0+s5iSaqE5bu8ep4D1wDNdH41uk/xF8X8yaZIJqIcYnRDqMBdiXZWP8UzZh+j3FvKrsVg8Z5B+CoSeTh+yOJqikNE71FMG1Fiv39pzKIOOViRaDRUb81LIRQ3vTl8dXhK/nKrP9cqgCcCkviIE0xF6aF0Jv2Iq3xO/Wi9SBg3piqgLOGNznUbktOZoXuRgdEZwKMrpQKM5oZDAC/DMj/g30Oc4rUJNgPu8DjQb4IPzxSJoFh6ChrwBVF88FeV1oCEEAsQDorDuK106B5qx6pp3GWDL5UsLSANPOg0RLhonLwTxAmh8ChoiBPP1sn3nEUMI/d9VoUupQpfSFUKb/QDF7h8N5m4YygAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Posta kód'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="794.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Text="[CurrentRow(&quot;Posta Kód&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/Pages/ResponsePage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="613, 568, 730, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='INPUT' class='office-form-question-textbox office-form-textfield-input form-control office-form-theme-focus-border border-no-radius' aaname='' /&gt;" Guid="ee84725c-d55f-473b-8130-d34e3a3763dc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAsCAYAAABSUb9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAN4SURBVHhe7dwxk1RFFAZQfy+GmGEGIWaYYY4Ba4IhhphhiglrhBlmkDHWN1V369L2PK3amd7BOcGpfa+7X/edF33b2ztfffq02wEAAKcleAMAwAI3wfvZsx8BAIAjmwbvugYAAG5P8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFBG8AAFhA8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFjh68nz79YW/WBwAAl+qowfvFi5/3Zn0AAHDJjhq83737c9oOAACX7mjB++3b693Dh49279//Ne1P+4MH3+5ev/5t2r8lzzx+/N3uw4eP0/67lqM1vb5zrxcAgPWWBe/bOOcgm9rG4zWnrDfvN+8573vWDwDAeRK8bym1zdoEbwAAupMF7+wCP3ny/T6A3r//ze7Nm9/31xVUE0pzf+/e13s5hnIotFeQffXq15vxY7DNs5mj+rf+yTN9NS5m4bnq6329bav+qrfqy31fr9eW95b3U30ZO46PzJd32Mf2NQAAOG8nDd4JibUzOwbZtL98+ctnfYfCcgXR/jWF/WsLK3TX3Lk/tCuctZ4/v7oJrFnzUIBNX18z89fYrfr7uNxfXf30WSivkF7P9bqvr//YX5fxs2x9NgAAztdJg3cPrWPIHI3juzHIRl9v1p/5KghvGeve6kt9h+bs9c/qKT041zvZqnNcsz/fxwEAcN7uNHinv45NjDva3SzIZp205WfW6vP8l/n6uK1jLpkj4/t6va/PU+uN9ebd9CMis78E9OfL+A4j6wveAABfnjsL3unrO7mzkFlmwbuvl/5Dz45mobjXPaq5xzW26u9rjPNvBec8X3McqmvreQAAztedBO8xhNd9H99lXHaEx/EVfLNmP+O9Zawr91s73mnPWrN6D9Wf9tynvV9XX+14Z+6c/057VG1bnyd9gjcAwJfnzna887Mfvcg3oGwF7zybMfXMODbrHzrO0VWorXGZc7az3GWtHp5jq/6qN+Prc9fYXFdwnvWlLfNUW+m/HOTd9vFVEwAA5+towfvf2KkFAOCSLQvefRd41g8AAP9nJw/edSTj0NEPAAC4BMt2vAEA4JIJ3gAAsIDgDQAACwjeAACwgOANAAALCN4AALCA4A0AAAsI3gAAsIDgDQAACwjeAACwwMHgDQAAHNc/gjcAAHA6gjcAAJzcbvc3INIVokCTZ1YAAAAASUVORK5CYII=" InformativeScreenshot="1ca87a0df989f5da1ac0ebcf3c6e3c96.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="613, 525, 74, 22" ElementType="Text" FriendlyName="'Posta kód'" FullSelectorArgument="&lt;webctrl aaname='Posta kód' parentid='QuestionId_r207b7f5ad2c74569a05dbf7661f93cad' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Posta kód' parentid='QuestionId_r207b7f5ad2c74569a05dbf7661f93cad' tag='SPAN' type='' class='text-format-content' check:innerText='Posta kód' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAaCAYAAAAZtWr8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIpSURBVGhD7ZQ7TgNBEEQ5FhzDHMHmBJDDJSA2KYQmhRBCcwNzA5OZjEEPqayi6WV3x0YIaYIn2P5U99Ts+uD9vZTGeJpxlTTjKmnGVdKMq6QZV0kzrpJ/bdxm81bOzy/KYnGX5jMuL68+e+jN8o706Ym5rXHr9WuZzU7K4eHRF7KmXUFzH7pjjVsunwebBqOM8yUU27d5f2EcZzk9PSur1Uuaz6g2DrilyeR41MA+/sq4oW+a2Mk4DJtOZ1+Mo8Y/Z8TjUgzzGnrQ4BI87r2xp8/czDguOurqbK5NnXpE3O/m5rbeOAYQ140h5EtlMTT8mYXu7x+2miwSl6FmPr/ePnft42i2anRw15aRbtTQGDrERhunRRRDNPts1Us+HiYjMy4DDb+AiM/SDq6rfDbLtbt2zjTFN+Nw2Ik3kB0kLsgCsdehLltGOZ+fzROaq08q1urisz38Jeiqi+dyej9Vp+/AnpN5EDUzHZamNmoMMY6+7EvgOf4+Z7muur0alx3kpwGZIfzvz+qPs4caRx167M85lMeIoW/crxrHsLgcqDdbEKIBQ4xTzPsi3qf/fb9MV/hOXWdXfGfjtIgGekziPPOb05UHX1ox8h6jhjc11jnS1s46g/fojfdL9bdNMTQ8Ju34tYhRxgmEEBTe4wNFHKxZ5HRIj6kHXTcholk+XzpuAn95ljZ56tQj0FENPD4+fer/aFxjHM24SppxlTTjKmnGVdKMq6KUD1ranJWCq/ctAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Állam'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="794.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Text="[CurrentRow(&quot;Állam&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/pages/responsepage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="613, 917, 730, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='6' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='INPUT' class='office-form-question-textbox office-form-textfield-input form-control office-form-theme-focus-border border-no-radius' aaname='' /&gt;" Guid="41c41037-4b19-4f90-b1c6-06ba74954ce2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAsCAYAAABSUb9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAN4SURBVHhe7dwxk1RFFAZQfy+GmGEGIWaYYY4Ba4IhhphhiglrhBlmkDHWN1V369L2PK3amd7BOcGpfa+7X/edF33b2ztfffq02wEAAKcleAMAwAI3wfvZsx8BAIAjmwbvugYAAG5P8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFBG8AAFhA8AYAgAUEbwAAWEDwBgCABQRvAABYQPAGAIAFjh68nz79YW/WBwAAl+qowfvFi5/3Zn0AAHDJjhq83737c9oOAACX7mjB++3b693Dh49279//Ne1P+4MH3+5ev/5t2r8lzzx+/N3uw4eP0/67lqM1vb5zrxcAgPWWBe/bOOcgm9rG4zWnrDfvN+8573vWDwDAeRK8bym1zdoEbwAAupMF7+wCP3ny/T6A3r//ze7Nm9/31xVUE0pzf+/e13s5hnIotFeQffXq15vxY7DNs5mj+rf+yTN9NS5m4bnq6329bav+qrfqy31fr9eW95b3U30ZO46PzJd32Mf2NQAAOG8nDd4JibUzOwbZtL98+ctnfYfCcgXR/jWF/WsLK3TX3Lk/tCuctZ4/v7oJrFnzUIBNX18z89fYrfr7uNxfXf30WSivkF7P9bqvr//YX5fxs2x9NgAAztdJg3cPrWPIHI3juzHIRl9v1p/5KghvGeve6kt9h+bs9c/qKT041zvZqnNcsz/fxwEAcN7uNHinv45NjDva3SzIZp205WfW6vP8l/n6uK1jLpkj4/t6va/PU+uN9ebd9CMis78E9OfL+A4j6wveAABfnjsL3unrO7mzkFlmwbuvl/5Dz45mobjXPaq5xzW26u9rjPNvBec8X3McqmvreQAAztedBO8xhNd9H99lXHaEx/EVfLNmP+O9Zawr91s73mnPWrN6D9Wf9tynvV9XX+14Z+6c/057VG1bnyd9gjcAwJfnzna887Mfvcg3oGwF7zybMfXMODbrHzrO0VWorXGZc7az3GWtHp5jq/6qN+Prc9fYXFdwnvWlLfNUW+m/HOTd9vFVEwAA5+towfvf2KkFAOCSLQvefRd41g8AAP9nJw/edSTj0NEPAAC4BMt2vAEA4JIJ3gAAsIDgDQAACwjeAACwgOANAAALCN4AALCA4A0AAAsI3gAAsIDgDQAACwjeAACwwMHgDQAAHNc/gjcAAHA6gjcAAJzcbvc3INIVokCTZ1YAAAAASUVORK5CYII=" InformativeScreenshot="a5000e4d7c3a7e21b892836ab5302cd1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="613, 874, 43, 22" ElementType="Text" FriendlyName="'Állam'" FullSelectorArgument="&lt;webctrl aaname='Állam' parentid='QuestionId_r5d4ca87fea03481c98f00bd65dd95c4e' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Állam' parentid='QuestionId_r5d4ca87fea03481c98f00bd65dd95c4e' tag='SPAN' type='' class='text-format-content' check:innerText='Állam' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAaCAYAAAAnkAWyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF3SURBVFhH7ZTBUcMwEEUpK5QRSohpIOYemgjnpIbQR+ggpoJwC7eIeZ75mfVmhT2MwTaTwx95Vyvp7Wrlu/M5panqBj+U/i/8ev2SVqvndDp9hvNDKwu/37+NGhyF8MfjRyrLp3Q4VFdzY1IW/ruKk9RiUVyS8/ZfKQtfFI/Zthk1PP0OzHz+UH/7+VHD85fZ7V7rEfn50cLbx4r4xmdjPKy35ePmZrP7WnzbeW6U1qyq93pUHH61rXwUUuusruAJVK8jvv1iD+tttNlsGzZ7AKRCAAmY9XHLJLlclpe1xPnEpQZ8BGuTkc/DejuSqqk3JHjZiPWA2vNzBUQN+Aiiiy+Kkd+2joVltFVHPkHUGZ5rswdZ2YfbBq8D7XVHle8NXgujIHz2oDb4LmC9wrMg9zDwMadNPay3IzB83KD2iGJ+DE9bEESwDUDaQK3TBs9okxXUr8DrsChAYkPdTARrbcReei9KxIL1Bj9V3eCH0g1+KE0YPqUvVXLVWpqrKcQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DelayAfter="1" DisplayName="Click 'Küldés'" sap:VirtualizedContainerService.HintSize="794.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/pages/responsepage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="594, 817, 178, 38" ElementType="Text" FriendlyName="'Küldés'" FullSelectorArgument="&lt;webctrl aaname='Küldés' parentid='form-container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Küldés' parentid='form-container' tag='DIV' type='' class='button-content' check:innerText='Küldés' /&gt;" Guid="c4a91a21-ea11-47d1-ae1d-8e4a36837288" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALYAAAAqCAYAAAAeVKE8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUjSURBVHhe7Ze9jlxFEEad8Qyz9s4ar8WP1/ZrkPIKPAgZxCA/ADFIRBAgIZFbJCAhQgIQGSCBEAgQ8mXO7Tk73/Teu7LZrFXBUVdXVde9Oz7TGt969myaimI0ZrFfevO9ohiGErsYkhK7GJISuxiSErsYkhK7GJISuxiSErsYkhK7GJISuxiSErsYkhK7GJISuxiSErsYkhK7GJISe4V3P3o6/fTrn9Nb7392mSP+7Y+/p2+//+Wodw37P/j8m8U6LD0na5xn7WvF9ZTYK/TCvfH2x9OPP/9+RWqk/euff+f+L77+YRbRMzcRmz3P6/PF81Fir9ALh9DPe1PLTcR+58OnJfUNKLFXSOG4ibk9ubWzZ0l2es0tic1cbng+c9ZPv/zuitj0U5c8f12tOMBnU2IvoNiIlz8vkhcVW6nd+/Mm51PLPWfYs2Zs7cknX81xcUyJvQLSeLMi61LPi4q91M9zvLEVvb+FOcPc7M16cZUSewUlQrK8ZZMlUdfEVtr+S5Ky2s+/Rw8zncF+7ctWNPiMSuwFUjjlJpc9/0fs/guyJPbSlyixb+mdikaJvUIKxx5hkcm9uV7slL0XNWtCzblrt/oaS88vGiX2Cr3YgEQpN1Lmrcmez3JN7L7f+nUzgf/AsqfmLFj6ohSNEnuFJbGXREQsPj+FXvsp4gxi+631z2GGPc4lzzshfZ8vrsLnU2IXw1FiF0NSYhdDUmIXQ1JiF0NSYhdDUmIXQ1JiF0NSYhdDUmIXQzKLffvua9PpvQfTydmrE/Fm+8q83nn59TkHxFkTz1C3/7r69vziMrbHOHPAOx2eR41zDy7XjE/vXRzl5eSsnSVm3Wz5Ww79ed7+O3wWPJP33MW5nu7en9Uc+77f/G3mMX83+/T84bwnBuOTM2bx3NZH7N6ePGudWHiGeaDfc9baezyctvcf7/bMof5ozrMe55jxaIYzxvYAPcb05D6xZp09K+/hTJ+Rdfo9m8/OWfafnvM3cY6/m3fmfR9PtxAoZUqRrZFDSvuUM/vAfV93zZjVM+YQOXvZt/ehr4GMs4D8g+3FZRX7rHlmaRV6kXs7S7Sr8V6BUivy9v6hj3XDF3jfQ66tB1JGhFM+ZUyRWWcp97JnX55FypTaXvuzxpkmBjnqDcRI2c31cROoiS7sN7t3ZLXW97IqI5DrnwfM8axrD3nnuW8rdeQ/xCd3L6ZbKXLKplzE4O1rLmNqeZt7xj6/FPb2fZnre9uXiz6+PLt/nL28rtYUmVs5b3ClzVuZmnVnCNIqsZhDXm5nRHav/LmnB4lStBQP0Tbb3d96HwGO64qrlM45CHp1lhLnuaT1NtEQQknMKYqywNWbsQls3j7J3owVMfv6nPnc0yPucy60v4e4rQh9KTYCNXmaWAk1RDsI1vL+pFDI/icKNVdncB44Y93z9mXeuK3UmtjK6F4hMxYk73OK7Oq5y7l7MVPUXFNeY7HezpJrq/Sy2zPLub+hzeWNveFLHDX2eR6UHhT9OG43NkKkHEuymG/iNBHtc2/NXntYs+5tzD7nEHN7cz5jIefqGc+5MtOfIgot829s5FEm6WX3JjXfhGsSKqz1pRnUe2E9mzONj+fwbOImc64pJbexN7n7PEfs3ti9uRQ1hc01Y27vPscNr1DKzA3NHgG9qVNK1l5u803Mlpv79rPNZUxtSXwkQQh/CjRpmMP5tu9FOu7l3Q8yK6o11uwl9qdKPwOyz7ozhOfbL+aoc35zxsyD3HB6/nj6D1rjdVx0ThnbAAAAAElFTkSuQmCC" InformativeScreenshot="01a148106c5dba4f7fd6a64219e77efe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="593, 816, 180, 40" ElementType="Button" FriendlyName="'Küldés'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='' class='office-form-theme-primary-background office-form-theme-button office-form-bottom-button button-control light-background-button __submit-button__' aaname='Küldés' check:innerText='Küldés' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[SikeresKitöltés]" sap:VirtualizedContainerService.HintSize="794.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="17adfb3a-4750-493c-92d8-f27291ffd765" InformativeScreenshot="86cde4af2065ed0f38737eddb2ee6e93" Selector="&lt;webctrl aaname='Válaszát sikeresen elküldtük.' parentid='form-container' tag='SPAN' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <If Condition="[SikeresKitöltés]" sap:VirtualizedContainerService.HintSize="794.4,370.4" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,209.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteCell Cell="[&quot;G&quot;+(Index+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet1" Text="Sikeres adatfeltöltés." WorkbookPath="C:\Users\juhaszde\Desktop\Doctor_Address.xlsx" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,209.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteCell Cell="[&quot;G&quot;+(Index+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet1" Text="Sikertelen adatfeltöltés." WorkbookPath="C:\Users\juhaszde\Desktop\Doctor_Address.xlsx" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Másik válasz beküldése'" sap:VirtualizedContainerService.HintSize="794.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd487ae-3a73-4dc9-8701-bf7012f62d04" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://forms.office.com/pages/responsepage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" DesignTimeRectangle="593, 416, 153, 20" ElementType="Text" FriendlyName="'Másik válasz beküldése'" FullSelectorArgument="&lt;webctrl tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='office-form-info-children' aaname='Másik válasz beküldése' check:innerText='Másik válasz beküldése' /&gt;" Guid="334947e2-89d2-4217-aef0-f8c902ceb688" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAYCAYAAADgW/+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ3SURBVGhD7Ze9alxXFIX9FH4Hv4LewOQJ/ATuQ0pXaeIuP6XaFCnSqXQIJIULq7BDHBIIREGgQIxMSLARCRhN9Am+YWnfc+4MI+kW5hSLuefsdfZee509V5o75+er1cDAkhhDN7A4xtANLI4xdAOLYwzdwOIYQzewOMbQDSyO9dC9PHmzuvfo6eqjr3+dkISc/e9PJrG3/75bPdj/cfa8ePXPf6u9x4dr7re//HW5Zr9yrwN0Zl41tvTfFm6iN/SiG/2t+By26VkOWmvMu2rFdsVk6ADPSRIMyd0Pv2s2QGxXYbcxdOSsX4D3dei8O2qBvMPrDB37D7/8uTsPu+LK0H3wxYuuQEwjvvfJ4SSOuOuYehMXU3F0ejbZ2+YCbhpLDN0ctulZTh2631+fXSL3bgKTofvq2Z9NkxDNmwNkA37LeAOCfLvYjDGNq0bUi2Hde6O2LpFn9ojVmsmtdQF65da3vHmNw635hb15VqiXT32qdeRlPtbG0Jv5WcupMXO5p97s2T1rffrk+HKdNeu9zp231qaYmAwdk10FmIi9OnQMqQbm5bOGm0MIl1zmMw98h8Nms36i1gA82xznqWMsNdS65Prsm+M1l33zVC7rzCuox9tfDyrQVs1nLwePtf2zrjlTVz2bMdbmm+uDdd4LMTRyjnWtv+u9trhgMnQUSNHEck2CTFqR8R63iiM/Tf30x0WzF59z+UFtZE5Tam+ZkkgP5Gp0C5vyAc7XN1ue69XJnviEc3j09+QLaYw87s31TCwHHFQNLT9Z63nP76zrXnrqXnPoAM8alUVaBdnzdQqMI4J1r8nkYWbr/8UW0riq1Xjq6V0A4By15aZWeHneM4J4LyZSa+7rI/vErZ+AAxce3tSBM1Y1wOn13OLL4ZzPLT2e09/aF7nrGVC/dM2hMwFN1/0cOg3TnBoXipFXjaAJh64a0gJ1HbQ0mBg10oxNF5CG1F4FOdGffcHNP0E9UH+boYOX8YQ6qaeHGauebeq55pDDucqfA5y815aWFrpD5/rjg9+uiNQsnrO5VjxBXgelNubF+P9kNaUF6/DphWUNeb0L8NmzoHqQyFjVPwd7y5xZe5tcxODgD7mSm/1VPns1f0sPzzn4eLrNHQDO6nkrdwvdoQMUrq9GL9sz+W2nqG8EmuVXkWYkd84IDdjUNHnuf/78iuaa11y9C0hzjaWO/JGRGjlvTuM96En2U8/DqT7nD7TkswfXHlyTI9fy7Uu+nrgGaENjzeEa8AzIt+les9fqI5gdOopkAsA6BfOMYI3NOM/G0tRqBHW8UNY2rXHsVbQaBJ6lJjm5PPPUul6A+uDWt5n61Zf5E6k/YW/knuOmjyD7IpZekDM5eRbewQ+n3Z5B9g3kk1eONTKv9Xv32spd42A9dAMDS2EM3cDiGEM3sDjG0A0sjjF0A4tjDN3Awlit/gfi+6KO2HuMDQAAAABJRU5ErkJggg==" InformativeScreenshot="45d292d06e5c5a5ec50598be8d05baa3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="658, 259, 171, 48" ElementType="Text" FriendlyName="'Köszönjük!'" FullSelectorArgument="&lt;webctrl parentid='form-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='form-container' tag='SPAN' type='' class='thank-you-page-comfirm-text' aaname='Köszönjük!' check:innerText='Köszönjük!' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADjSURBVDhPY4AB82MXBID4PRD/JwG/h2qHG4BN0X/Tw2f/Ky5b+19q9kIwBrFBYiA5qHYIQNcIwyAN/C2d/5lzCsAYxAaJgeQYmJvb3wPxf3yYpRWhGYZBLjE+eApsAFZN6JjR0gbDAJgL4IoOPHj4Hxk4LVoKl2N3coFrRvcCigGNBw/D+chYMDgMeyAiKwIZADME3SDp5AywBnSMYcCDDx/gBiHLMZpZoIQBDBPtBYoN4PUNgIcBCGM1AB/GZwDBhMRc14TbAGQA8icuLFJSSdgAmCApGKoVAoAC79EV4McF7wGS5hcjN4jnVwAAAABJRU5ErkJggg==" InformativeScreenshot="ea3692b29558c91a76a25d4383718ac3.png" Selector="&lt;html app='msedge.exe' title='Orvosok adatai' /&gt;" Url="https://forms.office.com/pages/responsepage.aspx?id=Z9MFUnJ-kUCun1qFt15tpXigoSyLUEdMogqAVunO1XZURTAyV1daTVhYRDRGME1LNzNXVks0M09KVS4u" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
 </Activity>
